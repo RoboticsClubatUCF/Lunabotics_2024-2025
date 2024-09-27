@@ -19,6 +19,9 @@ pwm_motor1.start(50)
 pwm_motor2.start(50)
 
 try:
+    pwm_motor1.ChangeDutyCycle(50)
+    time.sleep(2)
+    
     # Full M1
     print("Running Motor 1 forward (5V)...")
     pwm_motor1.ChangeDutyCycle(100)  # 100% duty cycle for full forward
