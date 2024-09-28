@@ -11,7 +11,7 @@ ser = serial.Serial(
 def send_motor_command(motor, speed):
     """
     Send a command to control a motor via the Sabertooth in Simplified Serial Mode.
-    
+
     motor: 1 or 2
     speed: Integer from -127 to 127 where:
         -127 is full reverse
@@ -32,7 +32,7 @@ def send_motor_command(motor, speed):
             command = 255
     else:
         raise ValueError("Motor must be 1 or 2")
-    
+
     ser.write(bytes([command]))
 
 def stop_motors():
@@ -41,9 +41,7 @@ def stop_motors():
     """
     ser.write(bytes([0x00]))
 
-while(true)
-	x=input("Speed: ")
-	send_motor_command(1, x)
-	send_motor_command(2, x)
-
-
+while(True):
+    x=int(input("Speed: "))
+    send_motor_command(1, x)
+    send_motor_command(2, x)
