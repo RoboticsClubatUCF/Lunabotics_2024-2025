@@ -24,6 +24,6 @@ def motor_command(motor, speed):
 
 
 while True:
-    x = int(input("Speed (-127 to 127): "))
+    x = int(input("Speed (-65 to 65): "))
     motor_command(1, x)
     motor_command(2, x)
