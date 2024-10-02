@@ -20,7 +20,7 @@ def motor_command(motor, speed):
             command = 128
         elif command > 255:
             command = 255
-    ser.write(bytes([speed]))
+    ser.write(bytes([command]))
 
 
 while True:
